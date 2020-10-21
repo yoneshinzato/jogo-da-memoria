@@ -7,7 +7,12 @@
 body {
     height: 100vh;
     display: flex;
-    background-color: rgb(188, 248, 228);
+    margin: 0 auto;
+    /* background-color: rgb(188, 248, 228); */
+    background: #41295a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .memory-game {
@@ -43,7 +48,11 @@ body {
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  background: rgb(92, 187, 182);
+  /* background: rgb(92, 187, 182); */
+  background: #BE93C5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   backface-visibility: hidden; /* todo elemento tem uma frente e um verso (ao contrario, como um espelho.) essa propriedade retira o verso */
 }
 
