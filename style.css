@@ -7,12 +7,7 @@
 body {
     height: 100vh;
     display: flex;
-    margin: 0 auto;
-    /* background-color: rgb(188, 248, 228); */
-    background: #41295a;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background-color: rgb(50, 189, 189)
 }
 
 .memory-game {
@@ -21,47 +16,25 @@ background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, F
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    perspective: 1000px; /* perspectiva do usuario no eixo z, quanto maior, maior o efeito da perspectiva */
 }
 
 .card {
-    height: calc( 33.333% - 10px);
+    height: calc(33.333% - 10px);
     width: calc(25% - 10px);
     margin: 5px;
     position: relative;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 1pxrgba(1, 1, 1, .3);
     cursor: pointer;
     transform: scale(1);
-    transform-style: preserve-3d; /* adiciona perspectiva 3d, para que o elemento nao fique achatada no plano */
-    transition: transform .9s; /* adiciona efeito de movimento ao flip do card */
-}
-
-.card:active{
-    transform: scale(0.97);
-    transition: transform .2s;
 }
 
 .card-front,
 .card-back {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  position: absolute;
-  border-radius: 5px;
-  /* background: rgb(92, 187, 182); */
-  background: #BE93C5;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  backface-visibility: hidden; /* todo elemento tem uma frente e um verso (ao contrario, como um espelho.) essa propriedade retira o verso */
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: white;
 }
 
-.card-front {
-    transform: rotateY(180deg); /* antes, o verso aparecia transparente, pois ambas as imagens tem position absolute, ao girar no eixo Y, elas ficaram com os versos virados */
-}
-
-/* flip card animation */
-
-.card.flip {
-    transform: rotateY(180deg);
-}
